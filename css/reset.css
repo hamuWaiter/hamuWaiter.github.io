@@ -1,0 +1,40 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+
+a{
+	text-decoration: none;
+}
+ul li{
+	list-style: none;
+}
+input,button,textarea{
+	outline: none;
+	border: none;
+}
+body{
+	-webkit-user-select: none;
+}
+img{
+	display: block;
+}
+.center{
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.left{
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.right{
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}

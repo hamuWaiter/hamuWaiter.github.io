@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html ondragstart="return false">
+	<head>
+		<meta charset="utf-8" />
+		<title>旋转相册</title>
+		<style>
+			* {
+				padding: 0px;
+				margin: 0px;
+				box-sizing: border-box;
+			}
+
+			body {
+				background-color: #000;
+				-webkit-user-select: none;
+			}
+
+			.perspective {
+				perspective: 1200px;
+			}
+			
+			body::-webkit-scrollbar{
+				display: none;
+			}
+
+			.wraper {
+				width: 100px;
+				position: relative;
+				margin: 200px auto;
+				/* border: 1px solid red; */
+				transform-style: preserve-3d;
+				transform: rotateX(-10deg);
+			}
+
+			.wraper img {
+				width: 100px;
+				position: absolute;
+				display: block;
+				transition: 1s;
+				-webkit-box-reflect:below 5px -webkit-linear-gradient(top, rgba(0,0,0,0)30%, rgba(0,0,0,.5)100%);
+			}
+/* 			.wraper p{
+				width: 1200px;
+				height: 1200px;
+				border-radius: 100%;
+				background: -webkit-radial-gradient(center,600px 600px,rgba(244,23,234,0.2),rgba(0,0,0,0));
+				position: absolute;
+				top: 112%;
+				left: 50%;
+				margin-left: -600px;
+				margin-top: -600px;
+				transform: rotateX(90deg);
+			} */
+
+		</style>
+	</head>
+	<body >
+		<div class="perspective">
+			<div class="wraper" id="demo">
+				<img src="images/1.jpg" alt=""><p></p>
+				<img src="images/2.jpg" alt=""><p></p>
+				<img src="images/3.jpg" alt=""><p></p>
+				<img src="images/4.jpg" alt=""><p></p>
+				<img src="images/5.jpg" alt=""><p></p>
+				<img src="images/7.jpg" alt=""><p></p>
+				<img src="images/6.jpg" alt=""><p></p>
+				<img src="images/8.jpg" alt=""><p></p>
+				<img src="images/9.jpg" alt=""><p></p>
+				<img src="images/10.jpg" alt=""><p></p>
+				<img src="images/11.jpg" alt=""><p></p>
+				<img src="images/12.jpg" alt=""><p></p>
+				<img src="images/13.jpg" alt=""><p></p>
+			</div>
+		</div>
+		<script>
+			var aImg = document.getElementsByTagName("img"),
+			    oWrap=document.getElementById("demo"),
+				len = aImg.length,
+				deg = 360 / len;
+			
+			console.log(oWrap);
+			
+			window.onload = function() { //3d转换要transition有效必须要在页面加载完时改
+				for (var i = 0; i < len; i++) {
+					aImg[i].style.transform = "rotateY(" + i * deg + "deg) translateZ(500px)";
+					aImg[i].style.transitionDelay = (len - i) * 0.1 + "s";
+				}
+			}
+
+
+			document.onmousedown = function(e) { //鼠标按下
+			
+			    var oAddrX=e.clientX,
+				    oAddrY=e.clientY;  //最开始的坐标
+					
+				this.onmousemove = function(e) { //鼠标移动 ( e：事件对象 ) 是所必须的
+				
+				var addrX=(e.clientX-oAddrX)*0.1,//前一次及现在的坐标差
+				    addrY=(e.clientY-oAddrY)*0.1;
+				
+				oWrap.style.transform += "rotateX("+addrY+"deg) rotateY("+addrX+"deg)";  //叠加而不是重复
+				
+				oAddrX=e.clientX; //将这一次已经使用过的坐标赋值给旧坐标变量
+				oAddrY=e.clientY;
+
+				}
+				this.onmouseup = function() { //松开鼠标
+				this.onmousemove=null;
+				}
+				
+			}
+		</script>
+	</body>
+</html>

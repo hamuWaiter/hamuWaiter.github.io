@@ -1,0 +1,88 @@
+.box {
+	width: 100%;
+	height: 100vh;
+}
+
+.box .top {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .2);
+}
+
+.box .swiper {
+	width: 100%;
+	height: 100vh;
+	/* overflow: hidden; */
+}
+
+.box .swiper ul {
+	display: flex;
+}
+
+.swiper li {
+	position: relative;
+}
+
+.swiper .content {
+	margin: 0 100px;
+	position: absolute;
+	color: #eee;
+}
+
+.swiper .content button {
+	background-color: rgba(255, 0, 0, .4);
+	line-height: 2em;
+	padding: 6px 10px;
+}
+
+.swiper .content a {
+	color: #eee;
+}
+
+.swiper .content h3 {
+	font-weight: normal;
+	font-size: 26px;
+	line-height: 2em;
+	border-bottom: 1px solid #ccc;
+}
+
+.swiper .content p {
+	margin: 20px 0;
+	font-size: 18px;
+}
+
+
+
+.box .tabbar {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.tabbar ul {
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, .2);
+}
+
+.tabbar li {
+	text-align: center;
+	padding: 10px 20px;
+	margin: 0 4px;
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, .2);
+	transition: .4s;
+}
+
+.tabbar ul a {
+	color: #ccc;
+}
+
+.tabbar li img {
+	margin: 0 auto;
+	margin-bottom: 6px;
+}

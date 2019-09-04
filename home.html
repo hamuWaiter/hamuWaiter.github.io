@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>you catch me!</title>
+		<link rel="shortcut icon" href="10.png">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/home.css">
+	</head>
+	<body>
+		<div class="box">
+			<canvas id="myCanvas">您的浏览器不支持 HTML5 canvas 标签。</canvas>
+			<div class="date">
+				<div class="time">
+					<label>当前时间为：</label>
+					<span></span>年
+					<span></span>月
+					<span></span>日
+					&nbsp;
+					&nbsp;
+					<span></span>:
+					<span></span>:
+					<span></span>
+				</div>
+				<div class="welcome">
+					<p>欢迎来到我的主页！</p>
+				</div>
+			</div>
+			<div class="content">
+				<div class="title">
+					<h3>发现新事物</h3>
+				</div>
+				<div class="tips">
+					<p>用放大镜看天地,不一样的风景</p>
+				</div>
+				<button type="button" id="go">
+
+					<a href="index.html">
+						开始发现&nbsp;>>
+					</a>
+				</button>
+			</div>
+		</div>
+		<script src="js/circle.js"></script>
+		<script>
+			window.onload = function(){
+				
+				var aSpan = document.getElementsByTagName("span");
+					
+				var time = "";
+				
+				var timerId = setInterval(update,1000);
+				
+				function update(){
+					time = new Date()
+						aSpan[0].innerHTML = time.getFullYear()
+						aSpan[1].innerHTML = time.getMonth()+1
+						aSpan[2].innerHTML = time.getDay()+1
+						aSpan[3].innerHTML = time.getHours()
+						aSpan[4].innerHTML = time.getMinutes()
+						aSpan[5].innerHTML = time.getSeconds()
+				};
+				
+				update()  //加载完成就调用一下update以防时间抖动
+			
+			}
+		</script>
+	</body>
+</html>
