@@ -257,12 +257,15 @@
 				}
 			}
 			for(var i = 0; i< btn.length; i++){
-				btn[i].onclick = function(){
-					show(true);
-					setTimeout(function(){
+				if(i != 3){
+					btn[i].onclick = function(){
+						show(true);
+						setTimeout(function(){
 						show(false)
-					},3000)
+						},3000)
+					}
 				}
+				
 			}
 			// 鼠标进出tabbar动作
 			for (let i = 0; i < tabbar.length; i++) {
