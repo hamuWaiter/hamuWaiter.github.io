@@ -1,0 +1,172 @@
+.wapper {
+	bottom: 0px;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	box-sizing: border-box;
+}
+
+.text {
+	width: 50%;
+	margin: 0 auto;
+	position: absolute;
+	top: 40px;
+	left: 36px;
+	font-family: "Microsoft YaHei";
+	font-weight: bold;
+	color: rgba(156, 239, 231, 1);
+}
+
+.skill {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.rect {
+	position: absolute;
+	width: 50px;
+	height: 100px;
+	overflow: hidden;
+}
+
+.right {
+	left: 50px;
+}
+
+.circle {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 4px solid rgba(111, 165, 162, .6);
+}
+
+.circle_right {
+	left: -50px;
+	clip: rect(0px 50px 100px 0px);
+}
+
+.circle_left {
+	clip: rect(0px 100px 100px 50px);
+}
+
+.css .circle_right {
+	animation: css_before 2s ease-in 0s 1 forwards;
+}
+
+.css .circle_left {
+	animation: css_after 2s ease-out 2s 1 forwards;
+}
+
+.js .circle_left {
+	animation: js_after 2s ease-out 2.3s 1 forwards;
+}
+
+.js .circle_right {
+	animation: js_before 2s ease-in 0.3s 1 forwards;
+}
+
+.html .circle_left {
+	animation: html_after 2s ease-out 2.1s 1 forwards;
+}
+
+.html .circle_right {
+	animation: html_before 2s ease-in 0.1s 1 forwards;
+}
+
+.frame .circle_left {
+	animation: frame_after 2s ease-out 2.8s 1 forwards;
+}
+
+.frame .circle_right {
+	animation: frame_before 2s ease-in 0.8s 1 forwards;
+}
+
+
+@keyframes css_before {
+	0% {
+		transform: rotate(0deg) scale(.4);
+		opacity: 0.4;
+	}
+
+	100% {
+		transform: rotate(180deg);
+	}
+}
+
+@keyframes css_after {
+	0% {
+		transform: rotate(0deg)
+	}
+
+	100% {
+		transform: rotate(162deg)
+	}
+}
+
+@keyframes js_before {
+	0% {
+		transform: rotate(0deg) scale(.4);
+		opacity: 0.4;
+	}
+
+	100% {
+		transform: rotate(180deg)
+	}
+}
+
+@keyframes js_after {
+	0% {
+		transform: rotate(0deg)
+	}
+
+	100% {
+		transform: rotate(144deg)
+	}
+}
+
+@keyframes html_before {
+	0% {
+		transform: rotate(0deg) scale(.4);
+		opacity: 0.4;
+	}
+
+	100% {
+		transform: rotate(180deg)
+	}
+}
+
+@keyframes html_after {
+	0% {
+		transform: rotate(0deg)
+	}
+
+	100% {
+		transform: rotate(162deg)
+	}
+}
+
+@keyframes frame_before {
+	0% {
+		transform: rotate(0deg) scale(.4);
+		opacity: 0.4;
+	}
+
+	100% {
+		transform: rotate(180deg)
+	}
+}
+
+@keyframes frame_after {
+	0% {
+		transform: rotate(0deg)
+	}
+
+	100% {
+		transform: rotate(126deg)
+	}
+}
+

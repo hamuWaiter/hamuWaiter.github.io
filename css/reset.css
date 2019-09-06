@@ -23,18 +23,47 @@ body{
 img{
 	display: block;
 }
-.center{
+
+/* 最左低 */
+.left-low {
+	left: 0;
+	top: 0;
+}
+
+/* 左高 */
+.left-high {
+	left: 300px;
+	bottom: 140px;
+}
+
+/* 中低 */
+.center-low {
+	left: 600px;
+	top: 0;
+}
+
+/* 中高 */
+.center-high {
+	left: 900px;
+	bottom: 140px;
+}
+
+
+/* 文本位置 */
+
+.align_center{
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%,-50%);
 }
-.left{
+.align_left{
 	left: 0;
 	top: 50%;
 	transform: translateY(-50%);
 }
-.right{
+.align_right{
 	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
 }
+

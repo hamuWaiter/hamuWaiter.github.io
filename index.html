@@ -7,97 +7,189 @@
 		<title>hamuWaiter's web</title>
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/skill.css">
+		<style type="text/css">
+			.tips{
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				background-color: rgba(0,0,0,.6);
+				padding: 20px 40px;
+				border-radius: 10px;
+				z-index: 10;
+				color: white;
+				opacity: 0;
+				display: flex;
+				align-items: center;
+				transition: all 1s ease;
+			}
+			.tips img{
+				border-radius: 5px;
+				margin-left: 20px;
+				width: 40px;
+				height: 40px;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="box">
 			<div class="container">
+				<div class="tips">
+					<p>当前只有<span style="color: red;font-weight:600;">旅游</span>页里的button可点击哦。</p>
+					<img src="img/笑脸.PNG" >
+				</div>
 				<div class="top">
-					<p>hello</p>
+					<p>hello,this is my web page,<i style="color: white;">welcome!</i></p>
+					<div class="avatar">
+						<img src="img/头像.png" alt="">
+						<!-- 						<p>个人简历>></p> -->
+					</div>
 				</div>
 				<div class="swiper" id="swiper">
 					<ul>
 						<li>
-							<div class="content right">
-								<h3>周智伟</h3>
-								<p>爱生活 爱音乐 爱前端</p>
-								<p>前端工程师</p>
+							<div class="content align_right">
+								<h3>Fighting Boy</h3>
+								<p class="p1">爱生活 爱音乐 爱前端</p>
+								<p class="p2">前端工程师</p>
 								<button type="button">
-									<a href="##">关于本人&nbsp;>></a>
+									<a href="javascript:;">关于本人&nbsp;>></a>
 								</button>
 							</div>
 							<img class="bgimg" src="bgimg/下午.jpg" alt="">
 						</li>
 						<li>
-							<div class="content left">
-								<h3>观点与分享</h3>
-								<p>记录生活点滴，分享多彩人生</p>
+							<div class="content align_left">
+								<h3>偷得浮生半日闲</h3>
+								<p class="p1">记录生活点滴，分享多彩人生</p>
+								<p class="p2">life is so good</p>
 								<button type="button">
-									<a href="##">我的分享&nbsp;>></a>
+									<a href="javascript:;">自得其乐&nbsp;>></a>
 								</button>
 							</div>
 							<img class="bgimg" src="bgimg/孔明灯.jpg" alt="">
 						</li>
 						<li>
-							<div class="content center">
+							<div class="content align_center">
 								<h3>影视·直播·购物</h3>
-								<p>欣赏电影，享受生活！</p>
+								<p class="p1">欣赏电影，享受生活！</p>
+								<p class="p2">环太平洋</p>
 								<button type="button">
-									<a href="##">娱乐&nbsp;>></a>
+									<a href="javascript:;">我的圈子&nbsp;>></a>
+								</button>
+							</div>
+							<img class="bgimg" src="bgimg/Stay.jpg" alt="">
+						</li>
+						<li>
+							<div class="content align_right">
+								<h3>周游世界！</h3>
+								<p class="p1">世界那么大，我想去看看</p>
+								<p class="p2">来一段说走就走的旅行</p>
+								<button type="button">
+									<a href="javascript:;" onclick="window.location.href='picture.html'">相册&nbsp;>></a>
+								</button>
+							</div>
+							<img class="bgimg" src="bgimg/樱花.jpg" alt="">
+						</li>
+						<li>
+							<div class="content align_center">
+								<h3>观点与分享！</h3>
+								<p class="p1">世界那么大，我想去看看</p>
+								<p class="p2">来一段说走就走的旅行</p>
+								<button type="button">
+									<a href="javascript:;">我的分享&nbsp;>></a>
 								</button>
 							</div>
 							<img class="bgimg" src="bgimg/新绿.jpg" alt="">
 						</li>
 						<li>
-							<div class="content right">
-								<h3>趣味相投</h3>
-								<p>我们都一样，一样热爱生活</p>
-								<p>记录生活</p>
-								<button type="button">
-									<a href="picture.html">相册&nbsp;>></a>
-								</button>
-							</div>
-							<img class="bgimg" src="bgimg/街拍.jpg" alt="">
-						</li>
-						<li>
-							<div class="content center">
-								<h3>周游世界！</h3>
-								<p>世界那么大，我想去看看</p>
-								<p>来一段说走就走的旅行</p>
-								<button type="button">
-									<a href="##">跳转&nbsp;>></a>
-								</button>
-							</div>
-							<img class="bgimg" src="bgimg/唯美插画.jpg" alt="">
-						</li>
-						<li>
-							<div class="content right">
+							<div class="content align_right">
 								<h3>兴趣爱好</h3>
-								<p>谁还木有一两个兴趣爱好呢</p>
-								<p>爱好很多 很多 很多</p>
+								<p class="p1">谁还木有一两个兴趣爱好呢</p>
+								<p class="p2">爱好很多 很多 很多</p>
 								<button type="button">
-									<a href="##">个人喜好&nbsp;>></a>
+									<a href="javascript:;">个人喜好&nbsp;>></a>
 								</button>
 							</div>
 							<img class="bgimg" src="bgimg/街拍.jpg" alt="">
 						</li>
 						<li>
-							<div class="content left">
-								<h3>技术栈</h3>
-								<p>前端基础</p>
-								<p>前端框架</p>
-								<button type="button">
-									<a href="##">了解更多&nbsp;>></a>
-								</button>
+							<div class="content align_left active" id="circle">
+								<div class="skillBox">
+									<div class="wapper left-low css">
+										<div class="rect right">
+											<div class="circle circle_right"></div>
+										</div>
+										<div class="rect left">
+											<div class="circle circle_left"></div>
+										</div>
+										<div class="text">
+											<span class="num">0</span><span>%</span>
+										</div>
+										<div class="skill">
+											<p>CSS</p>
+										</div>
+									</div>
+									<div class="wapper left-high js">
+										<div class="rect right">
+											<div class="circle circle_right"></div>
+										</div>
+										<div class="rect left">
+											<div class="circle circle_left"></div>
+										</div>
+										<div class="text">
+											<span class="num">0</span><span>%</span>
+										</div>
+										<div class="skill">
+											<p>JavcaScript</p>
+										</div>
+									</div>
+									<div class="wapper center-low html">
+										<div class="rect right">
+											<div class="circle circle_right"></div>
+										</div>
+										<div class="rect left">
+											<div class="circle circle_left"></div>
+										</div>
+										<div class="text">
+											<span class="num">0</span><span>%</span>
+										</div>
+										<div class="skill">
+											<p>HTML</p>
+										</div>
+									</div>
+									<div class="wapper center-high frame">
+										<div class="rect right">
+											<div class="circle circle_right"></div>
+										</div>
+										<div class="rect left">
+											<div class="circle circle_left"></div>
+										</div>
+										<div class="text">
+											<span class="num">0</span><span>%</span>
+										</div>
+										<div class="skill">
+											<p>框架</p>
+										</div>
+
+									</div>
+								</div>
+								<div class="viewmore">
+									<a href="javascript:;">
+										<img src="img/viewmore.png" alt="">
+									</a>
+								</div>
 							</div>
 							<img class="bgimg" src="bgimg/唯美插画.jpg" alt="">
 						</li>
 						<li>
 							<div class="content right">
 								<h3>周智伟</h3>
-								<p>爱生活 爱音乐 爱前端</p>
-								<p>前端工程师</p>
+								<p class="p1">爱生活 爱音乐 爱前端</p>
+								<p class="p2">前端工程师</p>
 								<button type="button">
-									<a href="##">跳转&nbsp;>></a>
+									<a href="javascript:;">跳转&nbsp;>></a>
 								</button>
 							</div>
 							<img class="bgimg" src="bgimg/下午.jpg" alt="">
@@ -106,40 +198,122 @@
 				</div>
 				<div class="tabbar">
 					<ul>
-						<li><a href="##">
-						<img src="img/个人简介.png" >
-						<p>简介</p>
-						</a></li>
-						<li><a href="##">
-						<img src="img/娱乐.png" >
-						<p>娱乐</p>
-						</a></li>
-						<li><a href="##">
-						<img src="img/圈子.png" >
-						<p>圈子</p>
-						
-						</a></li>
-						<li><a href="##">
-						<img src="img/旅行.png" >
-						<p>旅行</p>
-						
-						</a></li>
-						<li><a href="##">
-						<img src="img/博客.png" >
-						<p>博客</p>
-						</a></li>
-						<li><a href="##">
-						<img src="img/兴趣爱好.png" >
-						<p>兴趣爱好</p>
-						</a></li>
-						<li><a href="##">
-						<img src="img/技术栈.png" >
-						<p>技术栈</p>
-						</a></li>
+						<li><a href="javascript:;">
+								<img src="img/个人简介.png">
+								<p>简介</p>
+							</a></li>
+						<li><a href="javascript:;">
+								<img src="img/娱乐.png">
+								<p>娱乐</p>
+							</a></li>
+						<li><a href="javascript:;">
+								<img src="img/圈子.png">
+								<p>圈子</p>
+
+							</a></li>
+						<li><a href="javascript:;">
+								<img src="img/旅行.png">
+								<p>旅行</p>
+
+							</a></li>
+						<li><a href="javascript:;">
+								<img src="img/博客.png">
+								<p>博客</p>
+							</a></li>
+						<li><a href="javascript:;">
+								<img src="img/兴趣爱好.png">
+								<p>兴趣爱好</p>
+							</a></li>
+						<li><a href="javascript:;">
+								<img src="img/技术栈.png">
+								<p>我的技能</p>
+							</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
+		<script>
+			
+			
+			var tips = document.querySelector(".tips"); //获取提示框
+			
+			var tabbar = document.querySelectorAll(".tabbar li"); //tabbar
+			var aLi = document.querySelectorAll(".swiper li"); //所有的盒子
+			var text = document.querySelectorAll(".swiper .content"); //所有的盒子
+			var title = document.querySelectorAll(".swiper .content h3"); //所有标题
+			var p1 = document.querySelectorAll(".swiper .content .p1"); //所有文本(第一段)
+			var p2 = document.querySelectorAll(".swiper .content .p2"); //所有文本(第二行)
+			var btn = document.querySelectorAll(".swiper .content button");
+			
+			
+			// 提示框相关
+			function show(flag){
+				if(flag){
+					console.log("show")
+					tips.style.opacity = "1";
+				}else{
+					console.log("hidden")
+					tips.style.opacity = "0";
+				}
+			}
+			for(var i = 0; i< btn.length; i++){
+				btn[i].onclick = function(){
+					show(true);
+					setTimeout(function(){
+						show(false)
+					},3000)
+				}
+			}
+			// 鼠标进出tabbar动作
+			for (let i = 0; i < tabbar.length; i++) {
+				tabbar[i].onmouseenter = function() {
+					tabbar[i].style.outline = "1px solid red";
+				}
+				tabbar[i].onmouseleave = function() {
+					tabbar[i].style.outline = "none";
+				}
+			}
+			
+			
+			
+			// 初始化动画开始的位置
+			function init(idx) {
+				startSets(title, idx, 300, 0);
+				startSets(p1, idx, 300, 0.4);
+				startSets(p2, idx, 300, 0.8);
+				startSets(btn, idx, 300, 1);
+			}
+
+			// 元素名称(name)以及序号(index)以及初始偏移量(target)
+			// 1.开始状态设置以及过渡相关设置
+			function startSets(name, index, target, delay) {
+				name[index].style.left = target + "px";
+				name[index].style.transition = "all 1s ease " + delay + "s";
+			}
+			// 2.结束状态设置
+			function endSets(name, index, target) {
+				name[index].style.left = target + "px";
+			}
+
+
+
+			for (let i = 0; i < p1.length; i++) {
+				init(i); //初始化动画开始的位置
+
+				aLi[i].onclick = function() { //触发动画
+					if (i < 6) {
+						endSets(title, i, 0)
+						endSets(p1, i, 0)
+						endSets(p2, i, 0)
+						endSets(btn, i, 0)
+					}
+				}
+			}
+		</script>
 		<script src="js/swiper.js"></script>
+		<!-- 技能掌握程度动画 -->
+		<script src="js/skills.js"></script>
+		<!-- 动画 -->
+
 	</body>
 </html>

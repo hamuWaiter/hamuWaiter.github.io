@@ -37,7 +37,7 @@
 				</div>
 				<button type="button" id="go">
 
-					<a href="index.html">
+					<a href="javascript:;" onclick="window.location.href = 'index.html'">
 						开始发现&nbsp;>>
 					</a>
 				</button>
@@ -56,11 +56,11 @@
 				function update(){
 					time = new Date()
 						aSpan[0].innerHTML = time.getFullYear()
-						aSpan[1].innerHTML = time.getMonth()+1
-						aSpan[2].innerHTML = time.getDay()+1
-						aSpan[3].innerHTML = time.getHours()
-						aSpan[4].innerHTML = time.getMinutes()
-						aSpan[5].innerHTML = time.getSeconds()
+						aSpan[1].innerHTML = (time.getMonth()+1).toString().padStart(2,"0")
+						aSpan[2].innerHTML = (time.getDay()+1).toString().padStart(2,"0")
+						aSpan[3].innerHTML = time.getHours().toString().padStart(2,"0")
+						aSpan[4].innerHTML =time.getMinutes().toString().padStart(2,"0")
+						aSpan[5].innerHTML = time.getSeconds().toString().padStart(2,"0")
 				};
 				
 				update()  //加载完成就调用一下update以防时间抖动

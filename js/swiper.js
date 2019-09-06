@@ -28,17 +28,23 @@ window.onload = function() {
 
 
 
-	var idx = 0;
+	var idx = 6;
  	// 轮播部分
-	tab[0].style.backgroundColor = "rgba(255,0,0,.4)";
+	tab[idx].style.backgroundColor = "rgba(255,0,0,.4)";
+	swiper.style.transform = "translateX(-" + idx * aWidth + "px)";
+	// aLi[].click();
 	var timer = setInterval(function() {
-		// 清除上一个tabbar的样式
+		
+		init(idx);  //将上一次的文本隐藏
+			
+			// 清除上一个tabbar的样式
+			
 		tab[idx].style.backgroundColor = "rgba(255,255,255,.2)";
 		idx++;
 		if (idx < len - 1) {
 			swiper.style.transition = "transform 1s ease";
 			swiper.style.transform = "translateX(-" + idx * aWidth + "px)";
-
+			aLi[idx].click()  //文本出现
 			// tabbar跟随变化
 			tab[idx].style.backgroundColor = "rgba(255,0,0,.4)";
 
@@ -54,18 +60,29 @@ window.onload = function() {
 				idx = 0;
 				swiper.style.transition = "none";
 				swiper.style.transform = "translateX(-" + idx * aWidth + "px)";
+				aLi[0].click();  //让文本显示出来
+				
+				// 移除过渡监听
 				swiper.removeEventListener("transitionend", handel)
 			})
 		}
-	}, 5000);
+	}, 6000);
+	
+	
 
 	// tabbar部分
 	for (let i = 0; i < len - 1; i++) {
 		tab[i].idx = i;
 		tab[i].onclick = function() {
+			
+			init(idx);  //将上一次的文本隐藏
 			// 清除上一个tabbar样式
 			tab[idx].style.backgroundColor = "rgba(255,255,255,.2)";
+			// 这里idx表示轮播图中的序号
 			idx = this.idx;
+			
+			aLi[idx].click()  //文本显示
+			
 			// 更改这一次tabbar样式
 			tab[idx].style.backgroundColor = "rgba(255,0,0,.4)";
 
