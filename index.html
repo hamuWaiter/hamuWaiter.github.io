@@ -260,8 +260,9 @@
 				if(i != 3){
 					btn[i].onclick = function(){
 						show(true);
-						setTimeout(function(){
-						show(false)
+						tipTimer = setTimeout(function(){
+							show(false)
+							clearTimeout(tipTimer)
 						},3000)
 					}
 				}
