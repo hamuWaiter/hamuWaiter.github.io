@@ -29,7 +29,7 @@
 				margin: 200px auto;
 				/* border: 1px solid red; */
 				transform-style: preserve-3d;
-				transform: rotateX(-10deg);
+				transform: rotateX(-20deg);
 			}
 
 			.wraper img {
@@ -77,18 +77,19 @@
 
 			document.onmousedown = function(e) { //鼠标按下
 			
-			    var oAddrX=e.clientX,
-				    oAddrY=e.clientY;  //最开始的坐标
-					
+			    var oldX=e.clientX,
+				    oldY=e.clientY,
+					rotateX = -20,
+					rotateY = 0;
 				this.onmousemove = function(e) { //鼠标移动 ( e：事件对象 ) 是所必须的
 				
-				var addrX=(e.clientX-oAddrX)*0.1,//前一次及现在的坐标差
-				    addrY=(e.clientY-oAddrY)*0.1;
+					rotateX -= (e.clientY-oldY)*0.1;//前一次及现在的坐标差
+					rotateY += (e.clientX-oldX)*0.1;
 				
-				oWrap.style.transform += "rotateX("+addrY+"deg) rotateY("+addrX+"deg)";  //叠加而不是重复
+				oWrap.style.transform = "rotateX("+rotateX+"deg) rotateY("+rotateY+"deg)";  //叠加而不是重复
 				
-				oAddrX=e.clientX; //将这一次已经使用过的坐标赋值给旧坐标变量
-				oAddrY=e.clientY;
+				oldX=e.clientX; //将这一次已经使用过的坐标赋值给旧坐标变量
+				oldY=e.clientY;
 
 				}
 				this.onmouseup = function() { //松开鼠标

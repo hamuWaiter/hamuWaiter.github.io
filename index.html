@@ -2,42 +2,22 @@
 <html lang="zh">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>hamuWaiter's web</title>
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/index.css">
 		<link rel="stylesheet" href="css/skill.css">
-		<style type="text/css">
-			.tips{
-				position: fixed;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%,-50%);
-				background-color: rgba(0,0,0,.6);
-				padding: 20px 40px;
-				border-radius: 10px;
-				z-index: 10;
-				color: white;
-				opacity: 0;
-				display: flex;
-				align-items: center;
-				transition: all 1s ease;
-			}
-			.tips img{
-				border-radius: 5px;
-				margin-left: 20px;
-				width: 40px;
-				height: 40px;
-			}
-		</style>
 	</head>
-	<body>
+	<body ondragstart="return false">
 		<div class="box">
 			<div class="container">
+				<div class="play">
+					<span>继续播放</span>
+				</div>
 				<div class="tips">
 					<p>当前只有<span style="color: red;font-weight:600;">旅游</span>页里的button可点击哦。</p>
-					<img src="img/笑脸.PNG" >
+					<img src="img/笑脸.PNG">
 				</div>
 				<div class="top">
 					<p>hello,this is my web page,<i style="color: white;">welcome!</i></p>
@@ -48,7 +28,76 @@
 				</div>
 				<div class="swiper" id="swiper">
 					<ul>
-						<li>
+						<li class="item">
+							<div class="content align_left active" id="circle1">
+								<div class="skillBox">
+									<div class="wapper left-low css">
+										<div class="rect right">
+											<div class="circle circle_right"></div>
+										</div>
+										<div class="rect left">
+											<div class="circle circle_left"></div>
+										</div>
+										<div class="text">
+											<span class="num">0</span><span>%</span>
+										</div>
+										<div class="skill">
+											<p>CSS</p>
+										</div>
+									</div>
+									<div class="wapper left-high js">
+										<div class="rect right">
+											<div class="circle circle_right"></div>
+										</div>
+										<div class="rect left">
+											<div class="circle circle_left"></div>
+										</div>
+										<div class="text">
+											<span class="num">0</span><span>%</span>
+										</div>
+										<div class="skill">
+											<p>JavcaScript</p>
+										</div>
+									</div>
+									<div class="wapper center-low html">
+										<div class="rect right">
+											<div class="circle circle_right"></div>
+										</div>
+										<div class="rect left">
+											<div class="circle circle_left"></div>
+										</div>
+										<div class="text">
+											<span class="num">0</span><span>%</span>
+										</div>
+										<div class="skill">
+											<p>HTML</p>
+										</div>
+									</div>
+									<div class="wapper center-high frame">
+										<div class="rect right">
+											<div class="circle circle_right"></div>
+										</div>
+										<div class="rect left">
+											<div class="circle circle_left"></div>
+										</div>
+										<div class="text">
+											<span class="num">0</span><span>%</span>
+										</div>
+										<div class="skill">
+											<p>框架</p>
+										</div>
+						
+									</div>
+								</div>
+								<div class="viewmore">
+									<a href="javascript:;">
+										<img src="img/viewmore.png" alt="">
+									</a>
+								</div>
+							</div>
+							<img class="bgimg" src="bgimg/龙猫4.jpg" alt="">
+						</li>
+						<li class="item">
 							<div class="content align_right">
 								<h3>Fighting Boy</h3>
 								<p class="p1">爱生活 爱音乐 爱前端</p>
@@ -57,9 +106,9 @@
 									<a href="javascript:;">关于本人&nbsp;>></a>
 								</button>
 							</div>
-							<img class="bgimg" src="bgimg/下午.jpg" alt="">
+							<img class="bgimg" src="bgimg/下午茶.jpg" alt="">
 						</li>
-						<li>
+						<li class="item">
 							<div class="content align_left">
 								<h3>偷得浮生半日闲</h3>
 								<p class="p1">记录生活点滴，分享多彩人生</p>
@@ -68,9 +117,9 @@
 									<a href="javascript:;">自得其乐&nbsp;>></a>
 								</button>
 							</div>
-							<img class="bgimg" src="bgimg/孔明灯.jpg" alt="">
+							<img class="bgimg" src="bgimg/龙猫2.jpg" alt="">
 						</li>
-						<li>
+						<li class="item">
 							<div class="content align_center">
 								<h3>影视·直播·购物</h3>
 								<p class="p1">欣赏电影，享受生活！</p>
@@ -79,9 +128,9 @@
 									<a href="javascript:;">我的圈子&nbsp;>></a>
 								</button>
 							</div>
-							<img class="bgimg" src="bgimg/Stay.jpg" alt="">
+							<img class="bgimg" src="bgimg/小熊.jpg" alt="">
 						</li>
-						<li>
+						<li class="item">
 							<div class="content align_right">
 								<h3>周游世界！</h3>
 								<p class="p1">世界那么大，我想去看看</p>
@@ -90,10 +139,10 @@
 									<a href="javascript:;" onclick="window.location.href='picture.html'">相册&nbsp;>></a>
 								</button>
 							</div>
-							<img class="bgimg" src="bgimg/樱花.jpg" alt="">
+							<img class="bgimg" src="bgimg/龙猫3.jpg" alt="">
 						</li>
-						<li>
-							<div class="content align_center">
+						<li class="item">
+							<div class="content align_right">
 								<h3>观点与分享！</h3>
 								<p class="p1">世界那么大，我想去看看</p>
 								<p class="p2">来一段说走就走的旅行</p>
@@ -101,9 +150,78 @@
 									<a href="javascript:;">我的分享&nbsp;>></a>
 								</button>
 							</div>
-							<img class="bgimg" src="bgimg/新绿.jpg" alt="">
+							<div class="perspective">
+								<ul class="carousel">
+									<li>
+										<div class="project_title">
+											标题
+										</div>
+										<div class="detail">
+											这是项目
+											描述描述描述描述描
+											述描述描述描
+											述描述描述
+											描述描述描述描
+											述描述描述。
+										</div>
+									</li><p></p>
+									<li>
+										<div class="project_title">
+											标题
+										</div>
+										<div class="detail">
+											这是项目
+											描述描述描述描述描
+											述描述描述描
+											述描述描述
+											描述描述描述描
+											述描述描述。
+										</div>
+									</li><p></p>
+									<li>
+										<div class="project_title">
+											标题
+										</div>
+										<div class="detail">
+											这是项目
+											描述描述描述描述描
+											述描述描述描
+											述描述描述
+											描述描述描述描
+											述描述描述。
+										</div>
+									</li><p></p>
+									<li>
+										<div class="project_title">
+											标题
+										</div>
+										<div class="detail">
+											这是项目
+											描述描述描述描述描
+											述描述描述描
+											述描述描述
+											描述描述描述描
+											述描述描述。
+										</div>
+									</li><p></p>
+									<li>
+										<div class="project_title">
+											标题
+										</div>
+										<div class="detail">
+											这是项目
+											描述描述描述描述描
+											述描述描述描
+											述描述描述
+											描述描述描述描
+											述描述描述。
+										</div>
+									</li><p></p>
+								</ul>
+							</div>
+							<img class="bgimg" src="bgimg/龙猫1.jpg" alt="">
 						</li>
-						<li>
+						<li class="item">
 							<div class="content align_right">
 								<h3>兴趣爱好</h3>
 								<p class="p1">谁还木有一两个兴趣爱好呢</p>
@@ -112,10 +230,10 @@
 									<a href="javascript:;">个人喜好&nbsp;>></a>
 								</button>
 							</div>
-							<img class="bgimg" src="bgimg/街拍.jpg" alt="">
+							<img class="bgimg" src="bgimg/小清新.jpg" alt="">
 						</li>
-						<li>
-							<div class="content align_left active" id="circle">
+						<li class="item">
+							<div class="content align_left active" id="circle2">
 								<div class="skillBox">
 									<div class="wapper left-low css">
 										<div class="rect right">
@@ -181,9 +299,9 @@
 									</a>
 								</div>
 							</div>
-							<img class="bgimg" src="bgimg/唯美插画.jpg" alt="">
+							<img class="bgimg" src="bgimg/龙猫4.jpg" alt="">
 						</li>
-						<li>
+						<li class="item">
 							<div class="content right">
 								<h3>周智伟</h3>
 								<p class="p1">爱生活 爱音乐 爱前端</p>
@@ -192,132 +310,62 @@
 									<a href="javascript:;">跳转&nbsp;>></a>
 								</button>
 							</div>
-							<img class="bgimg" src="bgimg/下午.jpg" alt="">
+							<img class="bgimg" src="bgimg/下午茶.jpg" alt="">
 						</li>
 					</ul>
 				</div>
 				<div class="tabbar">
-					<ul>
-						<li><a href="javascript:;">
-								<img src="img/个人简介.png">
-								<p>简介</p>
-							</a></li>
-						<li><a href="javascript:;">
-								<img src="img/娱乐.png">
-								<p>娱乐</p>
-							</a></li>
-						<li><a href="javascript:;">
-								<img src="img/圈子.png">
-								<p>圈子</p>
+					<div class="bg_top"></div>
+					<div class="tabbar_box">
+						<div class="bar_left">
+							<p><i style="color: rgba(255, 230, 179,1);font-weight:600;">tips:</i>&nbsp;&nbsp;点击屏幕任意地方可停止轮播，点击停止后可以再次
+							点击右下角的开始播放继续轮播呦</p>
+						</div>
+						<ul>
+							<li><a href="javascript:;">
+									<img src="img/个人简介.png">
+									<p>简介</p>
+								</a></li>
+							<li><a href="javascript:;">
+									<img src="img/娱乐.png">
+									<p>娱乐</p>
+								</a></li>
+							<li><a href="javascript:;">
+									<img src="img/圈子.png">
+									<p>圈子</p>
 
-							</a></li>
-						<li><a href="javascript:;">
-								<img src="img/旅行.png">
-								<p>旅行</p>
+								</a></li>
+							<li><a href="javascript:;">
+									<img src="img/旅行.png">
+									<p>旅行</p>
 
-							</a></li>
-						<li><a href="javascript:;">
-								<img src="img/博客.png">
-								<p>博客</p>
-							</a></li>
-						<li><a href="javascript:;">
-								<img src="img/兴趣爱好.png">
-								<p>兴趣爱好</p>
-							</a></li>
-						<li><a href="javascript:;">
-								<img src="img/技术栈.png">
-								<p>我的技能</p>
-							</a></li>
-					</ul>
+								</a></li>
+							<li><a href="javascript:;">
+									<img src="img/博客.png">
+									<p>项目</p>
+								</a></li>
+							<li><a href="javascript:;">
+									<img src="img/兴趣爱好.png">
+									<p>爱好</p>
+								</a></li>
+							<li><a href="javascript:;">
+									<img src="img/技术栈.png">
+									<p>技能</p>
+								</a></li>
+						</ul>
+						<div class="bar_right">
+							<p><i style="color: rgba(255, 230, 179,1);font-weight:600">tips:</i>&nbsp;&nbsp;除此之外轮播图还可以进行拖动操作的哦，不妨一试（强烈安利一波）</p>
+						</div>
+					</div>
+					<div class="bg_bottom"></div>
 				</div>
 			</div>
 		</div>
-		<script>
-			
-			
-			var tips = document.querySelector(".tips"); //获取提示框
-			
-			var tabbar = document.querySelectorAll(".tabbar li"); //tabbar
-			var aLi = document.querySelectorAll(".swiper li"); //所有的盒子
-			var text = document.querySelectorAll(".swiper .content"); //所有的盒子
-			var title = document.querySelectorAll(".swiper .content h3"); //所有标题
-			var p1 = document.querySelectorAll(".swiper .content .p1"); //所有文本(第一段)
-			var p2 = document.querySelectorAll(".swiper .content .p2"); //所有文本(第二行)
-			var btn = document.querySelectorAll(".swiper .content button");
-			
-			
-			// 提示框相关
-			function show(flag){
-				if(flag){
-					console.log("show")
-					tips.style.opacity = "1";
-				}else{
-					console.log("hidden")
-					tips.style.opacity = "0";
-				}
-			}
-			for(var i = 0; i< btn.length; i++){
-				if(i != 3){
-					btn[i].onclick = function(){
-						show(true);
-						tipTimer = setTimeout(function(){
-							show(false)
-							clearTimeout(tipTimer)
-						},3000)
-					}
-				}
-				
-			}
-			// 鼠标进出tabbar动作
-			for (let i = 0; i < tabbar.length; i++) {
-				tabbar[i].onmouseenter = function() {
-					tabbar[i].style.outline = "1px solid red";
-				}
-				tabbar[i].onmouseleave = function() {
-					tabbar[i].style.outline = "none";
-				}
-			}
-			
-			
-			
-			// 初始化动画开始的位置
-			function init(idx) {
-				startSets(title, idx, 300, 0);
-				startSets(p1, idx, 300, 0.4);
-				startSets(p2, idx, 300, 0.8);
-				startSets(btn, idx, 300, 1);
-			}
-
-			// 元素名称(name)以及序号(index)以及初始偏移量(target)
-			// 1.开始状态设置以及过渡相关设置
-			function startSets(name, index, target, delay) {
-				name[index].style.left = target + "px";
-				name[index].style.transition = "all 1s ease " + delay + "s";
-			}
-			// 2.结束状态设置
-			function endSets(name, index, target) {
-				name[index].style.left = target + "px";
-			}
-
-
-
-			for (let i = 0; i < p1.length; i++) {
-				init(i); //初始化动画开始的位置
-
-				aLi[i].onclick = function() { //触发动画
-					if (i < 6) {
-						endSets(title, i, 0)
-						endSets(p1, i, 0)
-						endSets(p2, i, 0)
-						endSets(btn, i, 0)
-					}
-				}
-			}
-		</script>
+		<!-- 动画 -->
+		<script src="js/tabbar.js"></script>
+		<!-- 轮播 -->
 		<script src="js/swiper.js"></script>
 		<!-- 技能掌握程度动画 -->
 		<script src="js/skills.js"></script>
-		<!-- 动画 -->
-
 	</body>
 </html>
