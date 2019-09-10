@@ -49,18 +49,18 @@
 				
 				var aSpan = document.getElementsByTagName("span");
 					
-				var time = "";
+				// var time = "";
 				
 				var timerId = setInterval(update,1000);
 				
 				function update(){
-					time = new Date()
-						aSpan[0].innerHTML = time.getFullYear()
-						aSpan[1].innerHTML = (time.getMonth()+1).toString().padStart(2,"0")
-						aSpan[2].innerHTML = (time.getDay()+1).toString().padStart(2,"0")
-						aSpan[3].innerHTML = time.getHours().toString().padStart(2,"0")
-						aSpan[4].innerHTML =time.getMinutes().toString().padStart(2,"0")
-						aSpan[5].innerHTML = time.getSeconds().toString().padStart(2,"0")
+				var	time = new Date();
+						aSpan[0].innerHTML = time.getFullYear();
+						aSpan[1].innerHTML = (time.getMonth()+1).toString().padStart(2,"0");
+						aSpan[2].innerHTML = time.getDate().toString().padStart(2,"0");
+						aSpan[3].innerHTML = time.getHours().toString().padStart(2,"0");
+						aSpan[4].innerHTML =time.getMinutes().toString().padStart(2,"0");
+						aSpan[5].innerHTML = time.getSeconds().toString().padStart(2,"0");
 				};
 				
 				update()  //加载完成就调用一下update以防时间抖动

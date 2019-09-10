@@ -2,18 +2,27 @@
 	width: 100%;
 	height: 100vh;
 }
-
-.play {
+.box .container{
 	position: fixed;
-	bottom: 20%;
+	width: 100%;
+	height: 100%;
+}
+.controll{
+	cursor: pointer;
+	position: fixed;
 	right: 4%;
+	bottom: 20%;
 	z-index: 10;
 	line-height: 2em;
-	background-color: rgba(0, 0, 0, .6);
-	color: white;
+	background-color: rgba(0, 0, 0, .2);
+	color: rgba(255,255,255,.4);
 	border-radius: 10px;
 	padding: 10px;
-	display: none;
+	opacity: 0;
+}
+.controll:hover{
+	color: white;
+	background-color: rgba(0, 0, 0, .6);
 }
 
 .tips {
@@ -45,6 +54,7 @@
 	width: 100%;
 	top: 0;
 	left: 0;
+	height: 8%;
 	background-color: rgba(0, 0, 0, 1);
 	padding: 0 20px;
 	font-size: 16px;
@@ -53,6 +63,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	box-shadow: 0px 5px 20px black;
 }
 
 .top .avatar {
@@ -65,9 +76,30 @@
 .box .swiper {
 	width: 100%;
 	height: 100vh;
-	/* overflow: hidden; */
 	perspective: 800px;
+	background-color: rgba(0,0,255,.4);
 }
+.box .pre_page,
+.box .next_page{
+	cursor: pointer;
+	position: fixed;
+	z-index: 5;
+	padding: 20px 10px;
+	color: white;
+	top: 50%;
+	line-height: 4em;
+	background-color: rgba(255,0,0,.6);
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+.box .pre_page{
+	left: 4%;
+}
+.box .next_page{
+	right: 4%;
+}
+
 
 
 .box .swiper ul {
@@ -99,29 +131,24 @@
 
 .swiper .active .viewmore {
 	position: absolute;
-	right: 170px;
+	right: 300px;
 	animation: move 1s ease-in-out infinite;
 }
 
 
 @keyframes move {
 	0% {
-		right: 170px;
+		right: 360px;
 	}
 
 	50% {
-		right: 160px;
+		right: 340px;
 	}
 
 	100% {
-		right: 170px;
+		right: 360px;
 	}
 }
-
-
-
-
-
 
 .swiper .content button {
 	background-color: rgba(255, 0, 0, .4);
@@ -157,103 +184,44 @@
 
 /* tabbar */
 .box .tabbar {
-	border-radius: 30px;
-	box-shadow: 0 -4px 10px black;
 	width: 100%;
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	height: 16%;
-	background-color: rgba(123, 169, 169, 1);
-}
-
-.box .tabbar .bg_top {
-	border-radius: 30px;
-	height: 20%;
-	background-color: rgba(46, 56, 45, 1);
-}
-
-.box .tabbar .tabbar_box {
-	position: absolute;
-	top: 0;
-	height: 80%;
-	width: 100%;
-	display: flex;
-}
-
-.box .tabbar .bg_bottom {
-	height: 80%;
-	background-color: rgba(66, 95, 75, 1);
-}
-
-.tabbar_box .bar_left,
-.tabbar_box .bar_right {
+	height: 14%;
+	background-color: black;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 10px;
-	color: rgba(255, 255, 255, .8);
-	line-height: 1.5em;
-	background-color: rgba(46, 56, 45, 1);
+	box-shadow: 0px -5px 20px black;
+	z-index: 5;
 }
 
-.tabbar_box .bar_left {
-	border-radius: 20px;
-	flex: 3;
-}
-
-.tabbar_box ul {
-	border-radius: 20px 20px 0 0;
-	background-color: rgba(66, 95, 75, 1);
-	flex: 4;
+.tabbar ul {
+	padding: 10px 0;
 	display: flex;
-	align-items: center;
-	overflow: hidden;
 }
 
-.tabbar_box .bar_right {
-	border-radius: 20px;
-	height: 100%;
-	flex: 3;
-}
-
-.tabbar_box ul {
-	padding: 10px;
-	display: flex;
-	justify-content: space-around;
-
-	/* background-color: rgba(0, 0, 0, .4); */
-}
-
-.tabbar_box li {
+.tabbar li {
 	text-align: center;
-	margin: 0 10px;
-	padding: 10px;
+	padding: 10px 20px;
+	margin: 0 4px;
 	border-radius: 4px;
 	background-color: rgba(255, 255, 255, .2);
 	transition: .4s;
-	max-width: 100px;
-	max-height: 100px;
-	overflow: hidden;
-	display: flex;
-	align-items: center;
 }
 
-.tabbar_box ul a {
+.tabbar ul a {
+	display: block;
 	color: #ccc;
 }
 
-.tabbar_box ul p {
-	font-size: 80%;
-}
-
-.tabbar_box li img {
-	display: block;
+.tabbar li img {
 	width: 80%;
-	max-width: 70px;
 	margin: 0 auto;
 	margin-bottom: 6px;
 }
+
 
 
 /* 旋转木马部分 */

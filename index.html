@@ -12,8 +12,16 @@
 	<body ondragstart="return false">
 		<div class="box">
 			<div class="container">
-				<div class="play">
-					<span>继续播放</span>
+				<!-- 上一张 -->
+				<div class="pre_page">
+					<span>上一张</span>
+				</div>
+				<!-- 下一张 -->
+				<div class="next_page">
+					<span>下一张 </span>
+				</div>
+				<div class="controll">
+					<span>停止播放</span>
 				</div>
 				<div class="tips">
 					<p>当前只有<span style="color: red;font-weight:600;">旅游</span>页里的button可点击哦。</p>
@@ -86,7 +94,7 @@
 										<div class="skill">
 											<p>框架</p>
 										</div>
-						
+
 									</div>
 								</div>
 								<div class="viewmore">
@@ -95,7 +103,7 @@
 									</a>
 								</div>
 							</div>
-							<img class="bgimg" src="bgimg/龙猫4.jpg" alt="">
+							<img class="lazy" src="img/loading.gif" alt="pic" data-src="bgimg/龙猫4.jpg">
 						</li>
 						<li class="item">
 							<div class="content align_right">
@@ -106,7 +114,7 @@
 									<a href="javascript:;">关于本人&nbsp;>></a>
 								</button>
 							</div>
-							<img class="bgimg" src="bgimg/下午茶.jpg" alt="">
+							<img class="lazy" src="img/loading.gif" alt="pic" data-src="bgimg/下午茶.jpg">
 						</li>
 						<li class="item">
 							<div class="content align_left">
@@ -117,7 +125,7 @@
 									<a href="javascript:;">自得其乐&nbsp;>></a>
 								</button>
 							</div>
-							<img class="bgimg" src="bgimg/龙猫2.jpg" alt="">
+							<img class="lazy" src="img/loading.gif" alt="pic" data-src="bgimg/龙猫2.jpg">
 						</li>
 						<li class="item">
 							<div class="content align_center">
@@ -128,7 +136,7 @@
 									<a href="javascript:;">我的圈子&nbsp;>></a>
 								</button>
 							</div>
-							<img class="bgimg" src="bgimg/小熊.jpg" alt="">
+							<img class="lazy" src="img/loading.gif" alt="pic" data-src="bgimg/小熊.jpg">
 						</li>
 						<li class="item">
 							<div class="content align_right">
@@ -139,7 +147,7 @@
 									<a href="javascript:;" onclick="window.location.href='picture.html'">相册&nbsp;>></a>
 								</button>
 							</div>
-							<img class="bgimg" src="bgimg/龙猫3.jpg" alt="">
+							<img class="lazy" src="img/loading.gif" alt="pic" data-src="bgimg/龙猫3.jpg">
 						</li>
 						<li class="item">
 							<div class="content align_right">
@@ -154,7 +162,7 @@
 								<ul class="carousel">
 									<li>
 										<div class="project_title">
-											标题
+											项目标题
 										</div>
 										<div class="detail">
 											这是项目
@@ -164,10 +172,11 @@
 											描述描述描述描
 											述描述描述。
 										</div>
-									</li><p></p>
+									</li>
+									<p></p>
 									<li>
 										<div class="project_title">
-											标题
+											项目标题
 										</div>
 										<div class="detail">
 											这是项目
@@ -177,10 +186,11 @@
 											描述描述描述描
 											述描述描述。
 										</div>
-									</li><p></p>
+									</li>
+									<p></p>
 									<li>
 										<div class="project_title">
-											标题
+											项目标题
 										</div>
 										<div class="detail">
 											这是项目
@@ -190,10 +200,11 @@
 											描述描述描述描
 											述描述描述。
 										</div>
-									</li><p></p>
+									</li>
+									<p></p>
 									<li>
 										<div class="project_title">
-											标题
+											项目标题
 										</div>
 										<div class="detail">
 											这是项目
@@ -203,10 +214,11 @@
 											描述描述描述描
 											述描述描述。
 										</div>
-									</li><p></p>
+									</li>
+									<p></p>
 									<li>
 										<div class="project_title">
-											标题
+											项目标题
 										</div>
 										<div class="detail">
 											这是项目
@@ -216,10 +228,11 @@
 											描述描述描述描
 											述描述描述。
 										</div>
-									</li><p></p>
+									</li>
+									<p></p>
 								</ul>
 							</div>
-							<img class="bgimg" src="bgimg/龙猫1.jpg" alt="">
+							<img class="lazy" src="img/loading.gif" alt="pic" data-src="bgimg/龙猫1.jpg">
 						</li>
 						<li class="item">
 							<div class="content align_right">
@@ -230,7 +243,7 @@
 									<a href="javascript:;">个人喜好&nbsp;>></a>
 								</button>
 							</div>
-							<img class="bgimg" src="bgimg/小清新.jpg" alt="">
+							<img class="lazy" src="img/loading.gif" alt="pic" data-src="bgimg/小清新.jpg">
 						</li>
 						<li class="item">
 							<div class="content align_left active" id="circle2">
@@ -299,7 +312,7 @@
 									</a>
 								</div>
 							</div>
-							<img class="bgimg" src="bgimg/龙猫4.jpg" alt="">
+							<img class="lazy" src="img/loading.gif" alt="pic" data-src="bgimg/龙猫4.jpg">
 						</li>
 						<li class="item">
 							<div class="content right">
@@ -310,54 +323,44 @@
 									<a href="javascript:;">跳转&nbsp;>></a>
 								</button>
 							</div>
-							<img class="bgimg" src="bgimg/下午茶.jpg" alt="">
+							<img class="lazy" src="img/loading.gif" alt="pic" data-src="bgimg/下午茶.jpg">
 						</li>
 					</ul>
+					<!-- 上一张 -->
 				</div>
 				<div class="tabbar">
-					<div class="bg_top"></div>
-					<div class="tabbar_box">
-						<div class="bar_left">
-							<p><i style="color: rgba(255, 230, 179,1);font-weight:600;">tips:</i>&nbsp;&nbsp;点击屏幕任意地方可停止轮播，点击停止后可以再次
-							点击右下角的开始播放继续轮播呦</p>
-						</div>
-						<ul>
-							<li><a href="javascript:;">
-									<img src="img/个人简介.png">
-									<p>简介</p>
-								</a></li>
-							<li><a href="javascript:;">
-									<img src="img/娱乐.png">
-									<p>娱乐</p>
-								</a></li>
-							<li><a href="javascript:;">
-									<img src="img/圈子.png">
-									<p>圈子</p>
+					<ul>
+						<li><a href="javascript:;">
+								<img src="img/个人简介.png">
+								<p>简介</p>
+							</a></li>
+						<li><a href="javascript:;">
+								<img src="img/娱乐.png">
+								<p>娱乐</p>
+							</a></li>
+						<li><a href="javascript:;">
+								<img src="img/圈子.png">
+								<p>圈子</p>
 
-								</a></li>
-							<li><a href="javascript:;">
-									<img src="img/旅行.png">
-									<p>旅行</p>
+							</a></li>
+						<li><a href="javascript:;">
+								<img src="img/旅行.png">
+								<p>旅行</p>
 
-								</a></li>
-							<li><a href="javascript:;">
-									<img src="img/博客.png">
-									<p>项目</p>
-								</a></li>
-							<li><a href="javascript:;">
-									<img src="img/兴趣爱好.png">
-									<p>爱好</p>
-								</a></li>
-							<li><a href="javascript:;">
-									<img src="img/技术栈.png">
-									<p>技能</p>
-								</a></li>
-						</ul>
-						<div class="bar_right">
-							<p><i style="color: rgba(255, 230, 179,1);font-weight:600">tips:</i>&nbsp;&nbsp;除此之外轮播图还可以进行拖动操作的哦，不妨一试（强烈安利一波）</p>
-						</div>
-					</div>
-					<div class="bg_bottom"></div>
+							</a></li>
+						<li><a href="javascript:;">
+								<img src="img/博客.png">
+								<p>项目</p>
+							</a></li>
+						<li><a href="javascript:;">
+								<img src="img/兴趣爱好.png">
+								<p>爱好</p>
+							</a></li>
+						<li><a href="javascript:;">
+								<img src="img/技术栈.png">
+								<p>技能</p>
+							</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -367,5 +370,6 @@
 		<script src="js/swiper.js"></script>
 		<!-- 技能掌握程度动画 -->
 		<script src="js/skills.js"></script>
+		<!-- 懒加载 -->
 	</body>
 </html>

@@ -36,19 +36,19 @@ img{
 
 /* 左高 */
 .left-high {
-	left: 300px;
+	left: 240px;
 	bottom: 140px;
 }
 
 /* 中低 */
 .center-low {
-	left: 600px;
+	left: 440px;
 	top: 0;
 }
 
 /* 中高 */
 .center-high {
-	left: 900px;
+	left: 640px;
 	bottom: 140px;
 }
 
@@ -61,12 +61,12 @@ img{
 	transform: translate(-50%,-50%);
 }
 .align_left{
-	left: 0;
+	left: 6%;
 	top: 50%;
 	transform: translateY(-50%);
 }
 .align_right{
-	right: 0;
+	right: 6%;
 	top: 50%;
 	transform: translateY(-50%);
 }
