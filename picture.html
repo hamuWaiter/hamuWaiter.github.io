@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>旋转相册</title>
+		<link rel="shortcut icon" href="10.png">
 		<style>
 			* {
 				padding: 0px;
@@ -44,26 +45,21 @@
 	<body >
 		<div class="perspective">
 			<div class="wraper" id="demo">
-				<img src="images/1.jpg" alt="">
 				<img src="images/2.jpg" alt="">
 				<img src="images/3.jpg" alt="">
 				<img src="images/4.jpg" alt="">
 				<img src="images/5.jpg" alt="">
 				<img src="images/7.jpg" alt="">
 				<img src="images/6.jpg" alt="">
-				<img src="images/8.jpg" alt="">
-				<img src="images/9.jpg" alt="">
-				<img src="images/10.jpg" alt="">
-				<img src="images/11.jpg" alt="">
-				<img src="images/12.jpg" alt="">
-				<img src="images/13.jpg" alt="">
 			</div>
 		</div>
 		<script>
 			var aImg = document.getElementsByTagName("img"),
 			    oWrap=document.getElementById("demo"),
 				len = aImg.length,
-				deg = 360 / len;
+				deg = 360 / len,
+				rotateX = -20,
+				rotateY = 0;
 			
 			console.log(oWrap);
 			
@@ -78,9 +74,7 @@
 			document.onmousedown = function(e) { //鼠标按下
 			
 			    var oldX=e.clientX,
-				    oldY=e.clientY,
-					rotateX = -20,
-					rotateY = 0;
+				    oldY=e.clientY;
 				this.onmousemove = function(e) { //鼠标移动 ( e：事件对象 ) 是所必须的
 				
 					rotateX -= (e.clientY-oldY)*0.1;//前一次及现在的坐标差
