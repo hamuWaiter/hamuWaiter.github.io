@@ -162,7 +162,7 @@ function swiperMoveTo(currentIdx, targetIdx) {
 
 //6. 轮播部分
 // 设置轮播从哪里开始（初始位置）
-var idx = 1;
+var idx = 7;
 tab[idx - 1].style.backgroundColor = "rgba(255,0,0,.4)";
 swiper.style.transform = "translateX(-" + idx * aWidth + "px)";
 
