@@ -1,52 +1,55 @@
 window.onload = function() {
 	//1. 获取元素
-	var aImg = document.getElementsByClassName("lazy"),
-		swiper = document.getElementById("swiper"),
+	var aLi = document.getElementsByClassName("item"),
+		swiper = document.querySelector(".swiper ul"),
 		ul = swiper.querySelector("ul"),
 		tabbar = document.querySelector(".box .tabbar"),
 		tab = document.querySelectorAll(".tabbar li"),
 		controll = document.querySelector(".controll"),
 		preImg = document.querySelector(".box .pre_page"),
 		nextImg = document.querySelector(".box .next_page"),
-		len = aImg.length, //页面个数
+		len = aLi.length, //页面个数
 		aWidth = window.innerWidth, //屏幕宽度
 		aHeight = window.innerHeight;
 
 
 	// 可视区域高度
 	var w = window.innerWidth;
-	// 获取图片列表，即img标签列表
-	// var imgs = document.querySelectorAll(".lazy");  //所有的图片并初始化高度
 
-	// 获取到浏览器顶部的距离
-	function getLeft(ele) {
-		return ele.getBoundingClientRect().left;
-	}
+// 图片懒加载
 
-	// 懒加载实现
-	function lazyload(imgs) {
-		//滚动区域高度
-		for (let i = 0; i < imgs.length; i++) {
-			//图片距离顶部的距离大于可视区域和滚动区域之和时懒加载
-			if (getLeft(imgs[i]) < w) {
-				// 真实情况是页面开始有2秒空白，所以使用setTimeout定时2s
-				// 不加立即执行函数i会等于9
-				// 隐形加载图片或其他资源，
-				//创建一个临时图片，这个图片在内存中不会到页面上去。实现隐形加载
-				var temp = new Image();
-				temp.src = imgs[i].getAttribute('data-src'); //只会请求一次
-				// onload判断图片加载完毕，真是图片加载完毕，再赋值给dom节点
-				temp.onload = function() {
-					// 获取自定义属性data-src，用真图片替换假图片
-					imgs[i].src = imgs[i].getAttribute('data-src')
-				}
-			}
-		}
-	}
+// 	// 获取到浏览器顶部的距离
+// 	function getLeft(ele) {
+// 		return ele.getBoundingClientRect().left;
+// 	}
+// 
+// 	// 懒加载实现
+// 	function lazyload(imgs) {
+// 		//滚动区域高度
+// 		for (let i = 0; i < imgs.length; i++) {
+// 			//图片距离顶部的距离大于可视区域和滚动区域之和时懒加载
+// 			if (getLeft(imgs[i]) < w) {
+// 				// 真实情况是页面开始有2秒空白，所以使用setTimeout定时2s
+// 				// 不加立即执行函数i会等于9
+// 				// 隐形加载图片或其他资源，
+// 				//创建一个临时图片，这个图片在内存中不会到页面上去。实现隐形加载
+// 				var temp = new Image();
+// 				temp.src = imgs[i].getAttribute('data-src'); //只会请求一次
+// 				// onload判断图片加载完毕，真是图片加载完毕，再赋值给dom节点
+// 				temp.onload = function() {
+// 					// 获取自定义属性data-src，用真图片替换假图片
+// 					imgs[i].src = imgs[i].getAttribute('data-src')
+// 				}
+// 			}
+// 		}
+// 	}
+// 
+// 	timer2 = setInterval(function(){
+// 		lazyload(aImg)
+// 	}, 1000);
 
-	timer2 = setInterval(function(){
-		lazyload(aImg)
-	}, 1000);
+
+
 
 //2. 页面加载完成检测屏幕宽高并赋值给所有图片
 
@@ -55,10 +58,12 @@ window.onresize = setSize;
 function setSize() {
 	aWidth = window.innerWidth; //屏幕宽度
 	aHeight = window.innerHeight;
+	mycanvas.width = aWidth;
+	mycanvas.height = aHeight;
 	for (var i = 0; i < len; i++) {
 
-		aImg[i].style.width = aWidth + "px";
-		aImg[i].style.height = aHeight + "px";
+		aLi[i].style.width = aWidth + "px";
+		aLi[i].style.height = aHeight + "px";
 
 	}
 }

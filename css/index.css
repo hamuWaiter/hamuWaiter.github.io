@@ -2,6 +2,14 @@
 	width: 100%;
 	height: 100vh;
 }
+
+#mycanvas{
+	position: fixed;
+	transform: rotateY(180deg);
+	background: #000000;
+	background: url(../bgimg/星空背景.jpg) left top no-repeat;
+	background-size: cover;
+}
 .box .container{
 	position: fixed;
 	width: 100%;
@@ -15,14 +23,14 @@
 	z-index: 10;
 	line-height: 2em;
 	background-color: rgba(0, 0, 0, .2);
-	color: rgba(255,255,255,.4);
+	color: rgba(255,255,255,1);
 	border-radius: 10px;
 	padding: 10px;
 	opacity: 0;
+	transition: all .4s ease;
 }
 .controll:hover{
-	color: white;
-	background-color: rgba(0, 0, 0, .6);
+	background-color: rgba(0, 255, 255, .4);
 }
 
 .tips {
@@ -77,7 +85,11 @@
 	width: 100%;
 	height: 100vh;
 	perspective: 800px;
-	background-color: rgba(0,0,255,.4);
+}
+.box .swiper>ul{
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 .box .pre_page,
 .box .next_page{
@@ -108,6 +120,7 @@
 
 .swiper li {
 	position: relative;
+	background-color: rgba(0,0,0,.1);
 }
 
 .swiper .content {
@@ -149,7 +162,9 @@
 		right: 360px;
 	}
 }
-
+.swiper .content{
+	color: rgba(255,255,255,.8);
+}
 .swiper .content button {
 	background-color: rgba(255, 0, 0, .4);
 	line-height: 2em;
@@ -244,9 +259,10 @@
 	animation: carousel 30s linear infinite;
 }
 
-.carousel:hover {
+/* 用于停止旋转 */
+/* .carousel:hover {
 	animation-play-state: paused;
-}
+} */
 
 .carousel li {
 	padding: 0 14px;
@@ -254,22 +270,22 @@
 	width: 300px;
 	height: 200px;
 	position: absolute;
-	border: 1px solid rgba(255,255, 255, .4);
-	background: linear-gradient(rgba(0,0,0,.6),transparent);
+	border: 1px solid rgba(0,255,255, .4);
 	color: rgba(255,255,255,.8);
 	opacity: 0;
 	-webkit-box-reflect: below 5px -webkit-linear-gradient(top, rgba(0, 0, 0, 0)30%, rgba(0, 0, 0, .5)100%);
 }
 
 .carousel li:hover {
-	outline: 2px solid red;
+	/* outline: 2px solid red; */
+	box-shadow: 0 0 10px rgba(0,255,255,1);
 }
 
 .carousel p {
 	width: 1200px;
 	height: 1200px;
 	border-radius: 100%;
-	background: -webkit-radial-gradient(center, 600px 600px, rgba(9, 7, 16, 0.2), rgba(0, 0, 0, 0));
+	background: -webkit-radial-gradient(center, 600px 600px, rgba(0,255,255, 0.2), rgba(0, 0, 0, 0));
 	position: absolute;
 	top: 112%;
 	left: 50%;
@@ -280,7 +296,7 @@
 
 .carousel li .project_title {
 	line-height: 3em;
-	border-bottom: 1px solid rgba(255,255,255,.4);
+	border-bottom: 1px solid rgba(0,255,255,.4);
 	margin-bottom: 6px;
 	font-weight: 600;
 }
